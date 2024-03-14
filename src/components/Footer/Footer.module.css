@@ -1,13 +1,15 @@
-.footer{
+.footer {
   width: 100%;
   height: 50px;
   background-color: var(--primary);
   color: var(--white);
   font-weight: bold;
-  font-size: 1.125rem;
+  font-size: 1.125rem; /* 18px */
 
   display: flex;
   align-items: center;
   justify-content: center;
-
+  /* aula 11 extra 01 */
+  position: fixed;
+  bottom: 0;
 }

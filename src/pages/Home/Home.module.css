@@ -1,29 +1,31 @@
-/* css da page home */
-.home{
+
+/* css da page Home */
+.home {
   width: 100%;
-  min-height: 100vh;
+  min-height: 90vh;
 
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly; /* space-around */
 }
 
-.home img{
+.home img {
   height: 500px;
 }
 
-.home p {  
-  font-size: 3rem;
+.home p {
+  font-size: 3rem; /* 48px */
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
-.home span{
-  color: var(--red)
+.home span {
+  color: var(--red);
 }
+
 .btn {
   width: 250px;
-  height:50px;
+  height: 50px;
   font-size: 1.125rem;
   font-weight: bold;
   border: 0;
@@ -35,11 +37,29 @@
   text-decoration: none;
 }
 
-.btn_red{
+.btn_red {
   background-color: var(--red);
   color: var(--white);
 }
 
-.btn_red:hover{
+.btn_red:hover {
   background-color: var(--primary);
+}
+
+/* aula 11 extra 01 responsividade */
+@media (max-width: 768px) {
+.home {
+    flex-direction: column;
+}
+}
+
+@media (max-width: 480px) {
+.home p {
+    font-size: 2rem;
+}
+.home img {
+    max-width: 100%;
+    height: auto;
+    padding-inline: 2.5rem;
+}
 }

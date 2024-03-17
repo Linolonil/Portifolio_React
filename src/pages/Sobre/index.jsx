@@ -6,11 +6,32 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { FaReact } from "react-icons/fa6";
 import { FaNodeJs } from "react-icons/fa";
 import { PiFileSql } from "react-icons/pi";
+import { useEffect, useState } from 'react';
 
 
 
 
 function Sobre(){
+  const [periodo, setPeriodo] = useState(1);
+
+  useEffect(() => {
+    const inicioFaculdade = new Date('01-01-2022'); 
+    console.log(inicioFaculdade)
+    const hoje = new Date(); 
+    console.log(
+      hoje.getFullYear(),
+      inicioFaculdade.getFullYear(),
+      hoje.getMonth(),
+      inicioFaculdade.getMonth()
+    )
+
+    const diferencaMeses = (hoje.getFullYear() - inicioFaculdade.getFullYear()) * 12 + hoje.getMonth() - inicioFaculdade.getMonth();
+    console.log(diferencaMeses)
+    const periodoAtual = Math.floor(diferencaMeses / 6) + 1;
+
+    setPeriodo(periodoAtual);
+  }, []);
+
   return(
     <section className={styles.sobre}>
 
@@ -21,18 +42,18 @@ function Sobre(){
       <div className={styles.textos}>
         <h2>Sobre</h2>
 
-        <p>Sou <span>Lino jorge</span> <br/>
-        
-        <strong>Dev Full Stack </strong></p>
-
-        <p>Acadêmico de Engenharia da Computação 5° peíodo</p>
-
-        <p>Faço criações de aplicações dinâmicas e intuitivas</p>
+        <p>
+    Sou <span className={styles.hover_animate}>Lino jorge</span> <br/>
+    <strong>Dev Full Stack</strong> <br/>
+    Cursando o {periodo}° período de Engenharia da Computação <br/>
+    Utilizo no frontend ReactJS e no backend com Node.js, Javascript, <br/>
+    TypeScript MongoDB, MySQL, PostgreSQL.
+  </p>
       </div>
     </div>
 
     <div className={styles.techs}>
-        <h3>Techs</h3>
+        <h2>Techs</h2>
         <div className={styles.icones}>
           <FaHtml5 className={styles.ico}/>
           <FaCss3 className={styles.ico}/>

@@ -8,12 +8,12 @@ function Home(){
 
   return(
     <section className={styles.home}>
-      <div className={styles.apresentecao}>
-        <p>
-          Olá, sou <br></br>
-          <span>Lino Jorge</span><br></br>
-          Dev Full-Stack
-        </p>
+      <div className={styles.apresentacao}>
+      <p>
+      Olá, sou <br></br>
+      <span className={styles.hover_animate}>Lino Jorge</span><br></br>
+       Dev Full-Stack
+      </p>
         <Link to="/sobre" className={`${styles.btn} ${styles.btn_red}`}>
           Saiba mais
         </Link>

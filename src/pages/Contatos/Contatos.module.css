@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+  color: var(--text-color);
 }
 
 .icones{
@@ -17,6 +18,13 @@
   padding-block:1.5rem;
 }
 .icone{
-  font-size: 3rem;
-  color: var(--red);
+  font-size: 5rem;
+  color: var(--first-color);
+  padding: 10px;
+  transition: ease-in-out 0.5s;
+
+}
+.icone:hover{
+  transform: scale(1.5);
+  transition: ease-in-out 0.5s;
 }

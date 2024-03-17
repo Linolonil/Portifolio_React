@@ -2,18 +2,26 @@ import { useEffect, useState } from 'react'
 import Card from '../../components/Card'
 import styles from './Projetos.module.css'
 
-function Projetos(){
+function Projetos(){''
   const [repositories, setRepositories] = useState([]);
   
   useEffect(() => {
-    const buscarRepositorios = async () => {
-      const response = await fetch('https://api.github.com/users/linolonil/repos');
-      const data = await response.json();
-      setRepositories(data);
-    }
-  
-    buscarRepositorios();
-  }, []);
+  const buscarRepositorios = async () => {
+    const token = import.meta.env.VITE_GITHUB_TOKEN;
+    const repoGithub = import.meta.env.VITE_API_URL
+
+    const response = await fetch(`${repoGithub}`, {
+      headers: {
+        Authorization: `token ${token}`
+      }
+    });
+
+    const data = await response.json();
+    setRepositories(data);
+  }
+
+  buscarRepositorios();
+}, []);
 
   
 

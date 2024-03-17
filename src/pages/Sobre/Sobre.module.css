@@ -1,6 +1,32 @@
 .avatar{
   width: 16rem;
+  background-color: rgba(120, 120, 120, 1.7);
   border-radius: 50%;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 10px var(--first-color);
+  outline: 2px solid var(--first-color);
+  outline-offset: 1rem;
+  outline: 2px solid var(--first-color);
+  transition: 500ms ease-in-out;
+  animation: sliderShapes linear infinite;
+  -webkit-animation: pulseBorder 4000ms linear infinite;
+}
+@keyframes pulseBorder {
+  0%,
+  100% {
+    border-radius: 42% 58% 70% 30% 80%/ 45% 45% 55% 55% 94%;
+  }
+  34% {
+    border-radius: 70% 30% 46% 54%  42%  / 30% 29% 71% 70% 18%;
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 20%;
+  }
+}
+.avatar:hover {
+  outline-offset: -0.7rem;
+  outline: 2px solid var(--first-color);
+  box-shadow: 0 0 40px var(--first-color);
 }
 
 .sobre{
@@ -10,7 +36,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 2rem;
 }
+
 
  .bio{
   display: flex;
@@ -23,8 +51,17 @@
   color: var(--red);
   font-weight: bold;
 }
+
+.hover_animate {
+  display: inline-block;
+  transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+.hover_animate:hover{
+  transform: translateY(-5px); 
+
+}
 .bio strong{
-  color: var(--secondary);
+  color: var(--title-color);
   font-weight: bold;
 }
 .techs{
@@ -35,8 +72,20 @@
   justify-content: center;
   gap: 1.5rem;
 }
-.textos h2, p{
+
+.techs h2{
+  color: var(--title-color);
+}
+.textos{
+  min-width: 50%;
+}
+
+.textos h2{
   margin-bottom: 1rem;
+  color: var(--title-color);
+}
+.textos p{
+  color: var(--text-color);
 }
 
 .icones{
@@ -45,7 +94,57 @@
   align-items: center;
   justify-content: space-around;  
 }
+.ico{
+  color: var(--download-color);
+}
 .icones .ico{
   height: 50px;
   font-size: 5rem;
+  transition: ease-in-out all 0.5s;
+
+}
+
+.ico:hover{
+  color: var(--first-color);
+  transition:ease-in-out all 0.5s ;
+}
+
+@media (max-width: 768px) {
+  .bio{
+    flex-direction: column;
+  }
+
+  .icones .ico:hover{
+    color: var(--red);
+    transition: ease-in 0.2s;
+   }
+}
+
+@media (max-width: 490px) {
+  .avatar{
+    width: 10rem;
+  }
+
+  .bio{
+    gap: 1rem;
+  }
+
+ .textos {
+  text-align: center;
+  padding: 11px;
+ }
+ .techs h3{
+  text-align: center;
+  font-size:1.5rem;
+ }
+
+ .icones{
+  width: 20rem;
+ }
+
+ .icones .ico:hover{
+  color: var(--red);
+  transition: ease-in-out 0.2s;
+ }
+
 }

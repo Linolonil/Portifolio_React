@@ -1,31 +1,41 @@
+import { useEffect, useState } from 'react';
 import styles from './Card.module.css'
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import LanguageIcons from '../Icones';
-import { useEffect, useState } from 'react';
+import Icones from './../Icones/index';
+
+
 
 
 
 // eslint-disable-next-line react/prop-types
 function Card({name, description, html_url}){
 
-  const [repoLanguages, setRepoLanguage] = useState([])
+  const apiGithubLanguage = `${import.meta.env.VITE_API_URL_language}/${name}/languages`;
+  const token = import.meta.env.VITE_GITHUB_TOKEN;
 
-  useEffect(()=>{
-    const fecthRepoLanguages = async ()=>{
-      try{
-        const response = await fetch(`https://api.github.com/repos/linolonil/${name}/languages`)
-        const data = await response.json()
-        const languages = Object.keys(data)
-        setRepoLanguage(languages)
-      } catch(error){
-        console.log(`Error fetching repository languages: ${error}`)
+
+  const [languages, setLanguages] = useState([]);
+
+  useEffect(() => {
+    async function fetchLanguages() {
+      try {
+        const response = await fetch(`${apiGithubLanguage}`, { 
+        headers: {
+          Authorization: `token ${token}`
+        }
+      }
+          ).then(response => response.json());
+        console.log(response)
+        const languages = Object.keys(response);
+        setLanguages(languages);
+      } catch (error) {
+        console.error('Eror fetching languages:', error);
       }
     }
 
-    fecthRepoLanguages()
-  }, [name])
-  
+    fetchLanguages();
+  }, [name, apiGithubLanguage, token]);
 
   return(
     <section className={styles.card}>
@@ -33,9 +43,9 @@ function Card({name, description, html_url}){
       <p>{description}</p>
       <div className={styles.card_footer}>
         <div className={styles.card_icones}>
-         <LanguageIcons languages={repoLanguages}/>
+          <Icones languages={languages}/>
         </div>
-        <Link to={html_url} className={styles.card_botao}>
+        <Link to={html_url} className={styles.card_botao} rel="noopener noreferrer">
           <FaArrowRight/>
         </Link>
       </div>

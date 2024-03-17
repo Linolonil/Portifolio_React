@@ -39,14 +39,18 @@
 
 .btn_red {
   background-color: var(--red);
-  color: var(--white);
+  color: var(--text-color-form);
 }
 
 .btn_red:hover {
-  background-color: var(--primary);
+  background-color: var(--title-color);
+  color: var(--text-color-form);
+}
+.apresentacao p{
+  color: var(--title-color);
 }
 
-/* aula 11 extra 01 responsividade */
+
 @media (max-width: 768px) {
 .home {
     flex-direction: column;
@@ -57,9 +61,20 @@
 .home p {
     font-size: 2rem;
 }
+
 .home img {
     max-width: 100%;
     height: auto;
     padding-inline: 2.5rem;
 }
+}
+
+
+.hover_animate {
+  display: inline-block;
+  transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.hover_animate:hover {
+  transform: translateY(-5px); /* Translação para cima */
 }

@@ -5,14 +5,12 @@ import { SlMustache } from "react-icons/sl";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiTypescript } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
+import styles from './Icones.module.css'
 
-
-
-
-
-function LanguageIcons({ languages }) {
+function Icones({ languages }) {
+  
   function getLanguageIcon(language) {
-    switch(language.toLoweCase()) {
+    switch(language.toLowerCase()) {
       case 'html': return <FaHtml5 />;
       case 'css': return <FaCss3 />;
       case 'react': return <FaReact />;
@@ -29,7 +27,7 @@ function LanguageIcons({ languages }) {
   return(
     <div>
       {languages.map((language, index) => (
-        <span key={index} title={language}>
+        <span key={index} title={language} className={styles.icones}>
           {getLanguageIcon(language)}
         </span>
       ))}
@@ -37,8 +35,8 @@ function LanguageIcons({ languages }) {
   );
 }
 
-LanguageIcons.propTypes = {
+Icones.propTypes = {
   languages: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
-export default LanguageIcons;
+export default Icones;

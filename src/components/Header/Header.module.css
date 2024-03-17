@@ -100,25 +100,22 @@
 @media only screen and (max-width: 769px) {
   .toggler__icon {
     display: block;
-    z-index: 100;
 
   }
+  .nav__brand{
+    padding-left: 27%;
+  }
   .nav__menu {
-    position: relative;
+   position: fixed;
     background: var(--container-color);
     flex-direction: column;
     top: 4.9%;
-    width: 40%;
-    height: 90.3vh;
+    width: 50%;
+    height: 90vh;
     right: 0;
     transform: translateX(100%);
     transition: 0.5s ease;
-  }
-
-  
-  .nav__link{
-    font-size: 1.5rem;
-    z-index: 100;
+    z-index: 99;
 
   }
 }

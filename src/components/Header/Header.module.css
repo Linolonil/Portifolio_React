@@ -103,19 +103,18 @@
 
   }
   .nav__brand{
-    padding-left: 27%;
+   margin-left: 27%;
   }
   .nav__menu {
    position: fixed;
     background: var(--container-color);
     flex-direction: column;
-    top: 4.9%;
+    top: 4.6%;
     width: 50%;
-    height: 90vh;
+    height: 91vh;
     right: 0;
     transform: translateX(100%);
     transition: 0.5s ease;
-    z-index: 99;
 
   }
 }
@@ -124,7 +123,7 @@
     display: block;
   }
   .nav__brand{
-    padding-left: 27%;
+    margin-left: 27%;
   }
   .nav__menu {
     position: fixed;
@@ -149,7 +148,7 @@
     display: block;
   }
   .nav__brand{
-    padding-left: 27%;
+    margin-left: 27%;
   }
   .nav__menu {
     position: fixed;

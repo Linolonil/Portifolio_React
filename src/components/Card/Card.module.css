@@ -25,7 +25,7 @@
   color: var(--primary);
 }
 .card p{
-  color: #555;
+  color: var(--text-color);
 }
 .card_footer{
   width: 100%;
@@ -37,7 +37,7 @@
 .card_icones{
   display: flex;
   gap: 1px;
-  color: var(--red);
+  color: var(--first-color);
   font-size: 1.5rem;  
 }
 

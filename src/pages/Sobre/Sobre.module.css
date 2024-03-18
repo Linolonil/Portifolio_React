@@ -1,5 +1,6 @@
 .avatar{
   width: 16rem;
+  height: auto;
   background-color: rgba(120, 120, 120, 1.7);
   border-radius: 50%;
   margin-bottom: 1.5rem;
@@ -11,6 +12,8 @@
   animation: sliderShapes linear infinite;
   -webkit-animation: pulseBorder 4000ms linear infinite;
 }
+
+
 @keyframes pulseBorder {
   0%,
   100% {
@@ -109,7 +112,10 @@
   transition:ease-in-out all 0.5s ;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+  .avatar{
+    width: 21rem;
+  }
   .bio{
     flex-direction: column;
   }
@@ -118,11 +124,49 @@
     color: var(--red);
     transition: ease-in 0.2s;
    }
+   .textos {
+    text-align: center;
+    padding: 11px;
+   }
+   .techs h3{
+    text-align: center;
+    font-size:1.5rem;
+   }
+  
+   .icones{
+    width: 40rem;
+   }
+  
+   
 }
 
-@media (max-width: 490px) {
+@media only screen and (max-width: 490px) {
+  .avatar{
+    width: 15rem;
+  }
+
+  .bio{
+    gap: 1rem;
+  }
+
+ .textos {
+  text-align: center;
+  padding: 11px;
+ }
+ .techs h3{
+  text-align: center;
+  font-size:1.5rem;
+ }
+
+ .icones{
+  width: 25rem;
+ }
+
+}
+@media only screen and (max-width: 400px) {
   .avatar{
     width: 10rem;
+    margin-top: 2rem;
   }
 
   .bio{
@@ -140,11 +184,6 @@
 
  .icones{
   width: 20rem;
- }
-
- .icones .ico:hover{
-  color: var(--red);
-  transition: ease-in-out 0.2s;
  }
 
 }

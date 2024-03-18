@@ -14,7 +14,7 @@ function Card({name, description, html_url}){
   const apiGithubLanguage = `${import.meta.env.VITE_API_URL_language}/${name}/languages`;
   const token = import.meta.env.VITE_GITHUB_TOKEN;
 
-
+  console.log({html_url})
   const [languages, setLanguages] = useState([]);
 
   useEffect(() => {
@@ -26,7 +26,6 @@ function Card({name, description, html_url}){
         }
       }
           ).then(response => response.json());
-        console.log(response)
         const languages = Object.keys(response);
         setLanguages(languages);
       } catch (error) {

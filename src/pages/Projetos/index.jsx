@@ -4,6 +4,7 @@ import styles from './Projetos.module.css'
 
 function Projetos(){''
   const [repositories, setRepositories] = useState([]);
+  console.log({repositories})
   
   useEffect(() => {
   const buscarRepositorios = async () => {
@@ -39,6 +40,7 @@ function Projetos(){''
                 key={repo.id} 
                 name={repo.name} 
                 description={repo.description} 
+                html_url={repo.html_url}
                 />
               }
               )

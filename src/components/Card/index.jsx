@@ -44,7 +44,7 @@ function Card({name, description, html_url}){
         <div className={styles.card_icones}>
           <Icones languages={languages}/>
         </div>
-        <Link to={html_url} className={styles.card_botao} rel="noopener noreferrer">
+        <Link to={html_url} className={styles.card_botao} rel="noopener noreferrer" target='_blank'>
           <FaArrowRight/>
         </Link>
       </div>

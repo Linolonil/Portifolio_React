@@ -33,13 +33,15 @@
 }
 
 .sobre{
-  width: 100%;
+  width: 100%   ;
   min-height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
+  overflow-x: hidden;
+
 }
 
 
@@ -57,7 +59,7 @@
 
 .hover_animate {
   display: inline-block;
-  transition: transform 0.3s ease; /* Adiciona uma transição suave */
+  transition: transform 0.3s ease; 
 }
 .hover_animate:hover{
   transform: translateY(-5px); 
@@ -91,17 +93,19 @@
   color: var(--text-color);
 }
 
-.icones{
-  width: 100%;
+.icones {
+  width: 90vw;
   display: flex;
   align-items: center;
   justify-content: space-around;  
+  flex-wrap: wrap;
 }
+
 .ico{
   color: var(--download-color);
 }
 .icones .ico{
-  height: 50px;
+  max-height: 50px;
   font-size: 5rem;
   transition: ease-in-out all 0.5s;
 
@@ -115,6 +119,7 @@
 @media only screen and (max-width: 768px) {
   .avatar{
     width: 21rem;
+    margin-top: 1.5rem;
   }
   .bio{
     flex-direction: column;
@@ -135,14 +140,24 @@
   
    .icones{
     width: 40rem;
+    margin-bottom: 2.5rem;
    }
+   .icones > * {
+    flex-grow: 1; 
+    flex-basis: calc(100% / 3 - 10px); 
+    margin: 5px; 
+    max-width: 150px; 
+    text-align: center; 
+  }
   
    
 }
 
-@media only screen and (max-width: 490px) {
+@media only screen and (max-width: 580px) {
+ 
   .avatar{
     width: 15rem;
+    margin-top: 2.5rem;
   }
 
   .bio{
@@ -161,6 +176,15 @@
  .icones{
   width: 25rem;
  }
+ .icones > * {
+  flex-grow: 1; 
+  flex-basis: calc(100% / 3 - 10px); 
+  margin: 5px; 
+  max-width: 150px; 
+  text-align: center; 
+}
+
+
 
 }
 @media only screen and (max-width: 400px) {

@@ -15,7 +15,7 @@ function Home(){
        Dev Full-Stack
       </p>
         <Link to="/sobre" className={`${styles.btn} ${styles.btn_red}`}>
-          Saiba mais
+          Sobre mim
         </Link>
       </div>
       <figure>

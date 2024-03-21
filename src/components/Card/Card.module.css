@@ -18,7 +18,7 @@
   outline: 5px solid var(--first-color);
   box-shadow: none;
   transform: translateY(-10px);
-  outline-offset: -0.rem;
+  outline-offset: -0.1rem;
 }
 
 .card h3{

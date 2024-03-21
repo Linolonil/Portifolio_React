@@ -5,9 +5,11 @@ function Contatos(){
   return(
    <>
       <section className={styles.contatos}>
+        <div className={styles.contatos_texto}>
         <h2>Contatos</h2>
         <h3>Entre em Contato</h3>
         <p>Para que possamos conversar mais sobre.</p>
+        </div>
         
         <div className={styles.icones}>
           <a href='https://wa.me/5592985515439?text=Ol%C3%A1.' target="_blank" rel='noopener noreferrer' className={styles.icone}>

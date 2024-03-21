@@ -8,6 +8,6 @@
 
   background-color: var(--body-color);
 
-  padding-block: 30px; /* era 1rem; */
+  padding-block: 30px; 
   gap: 1rem;
 }

@@ -1,31 +1,4 @@
-.header {
-  width: 100%;
-  height: 50px;
-  background-color: var(--container-color);
-  color: var(--text-color);
 
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  position: fixed;
-  top: 0;
-}
-
-.header span {
-  font-size: 1.5rem; 
-  font-weight: bold;
-}
-
-.header a {
-  text-decoration: none;
-  color: var(--text-color);
-  padding-right: 1.5rem;
-  font-size: 1.125rem; /* 18px */
-}
-
-.header a:hover {
-  color: var(--text-color-form);
-}
 .nav__wrapper {
   width: 100%;
   height: 50px;
@@ -62,7 +35,6 @@
   font-weight: 700;
   color: var(--title-color);
   text-decoration: none;
-
 }
 
 .nav__menu {

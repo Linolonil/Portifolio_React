@@ -37,6 +37,13 @@
 }
 
 @media only screen and (max-width: 769px) {
+  .icone{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;  
+  }
 
 }
 @media only screen and (max-width: 480px) {

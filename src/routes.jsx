@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { animated, useTransition } from '@react-spring/web';
+import { motion, AnimatePresence } from 'framer-motion';
 import Header from './components/Header/index';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -11,19 +11,20 @@ import PaginaBase from './pages/PaginaBase/index';
 
 function AnimatedRoutes() {
   const location = useLocation();
-  
-  const transitions = useTransition(location, {
-    from: { opacity: 0, transform: 'translateY(50px)' },
-    enter: { opacity: 1, transform: 'translateY(0)' },
-    leave: { opacity: 0, transform: 'translateY(50px)' },
-  });
 
   return (
     <>
       <Header />
-      {transitions((props, item) => (
-        <animated.div style={{ ...props, position: 'absolute', width: '100%', minHeight: '100vh' }}>
-          <Routes location={item}>
+      <AnimatePresence>
+        <motion.div
+          key={location.pathname}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 50 }}
+          transition={{ duration: 0.3 }}
+          className="absolute w-full min-h-screen"
+        >
+          <Routes location={location}>
             <Route path="/" element={<PaginaBase />}>
               <Route index element={<Home />} />
               <Route path="/sobre" element={<Sobre />} />
@@ -32,8 +33,8 @@ function AnimatedRoutes() {
               <Route path="/*" element={<Page404 />} />
             </Route>
           </Routes>
-        </animated.div>
-      ))}
+        </motion.div>
+      </AnimatePresence>
       <Footer />
     </>
   );

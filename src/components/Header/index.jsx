@@ -36,7 +36,7 @@ function Header() {
   };
 
   return (
-    <div className="w-full h-12 flex items-center justify-around fixed top-0 z-50 shadow-md bg-[var(--container-color)] text-[var(--text-color)] border-b border-[var(--outline-color)]">
+    <div className="w-full  h-12 flex items-center justify-around fixed top-0 z-50 shadow-md bg-[var(--container-color)] text-[var(--text-color)] border-b border-[var(--outline-color)]">
       <nav ref={navRef} className="w-full flex items-center justify-between px-5 md:px-8">
         <div className="flex items-center justify-between w-full">
           <DarkMode />
@@ -69,7 +69,7 @@ function Header() {
         </div>
 
         {/* Menu Responsivo */}
-        <motion.div
+     {collapse ?  <motion.div
           ref={menuRef}
           initial={{ opacity: 0}}
           animate={{ opacity: collapse ? 1 : 0 }}
@@ -91,7 +91,7 @@ function Header() {
           <Link className={`hover:text-[var(--red)] ${activePage === '/contatos' ? 'text-[var(--red)]' : ''}`} onClick={onToggle} to="/contatos">
             Contatos
           </Link>
-        </motion.div>
+        </motion.div> : null}
       </nav>
     </div>
   );

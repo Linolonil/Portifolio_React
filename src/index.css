@@ -56,7 +56,7 @@ body {
 /* barra de rolagem */
 /* Estilizando a barra de rolagem */
 ::-webkit-scrollbar {
-  width: 10px; /* Largura da barra de rolagem */
+  width: 8px; /* Largura da barra de rolagem */
 }
 
 /* Estilizando o trilho da barra de rolagem */
@@ -67,7 +67,7 @@ body {
 /* Estilizando o indicador (thumb) da barra de rolagem */
 ::-webkit-scrollbar-thumb {
   background-color: var(--first-color); /* Cor do indicador */
-  border-radius: 6px; /* Bordas arredondadas */
+  border-radius: 4px; /* Bordas arredondadas */
 }
 
 /* Estilizando o indicador quando hover (opcional) */

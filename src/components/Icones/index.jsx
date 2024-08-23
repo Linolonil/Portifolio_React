@@ -5,7 +5,6 @@ import { SlMustache } from "react-icons/sl";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiTypescript } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
-import styles from './Icones.module.css'
 
 function Icones({ languages }) {
   
@@ -27,9 +26,11 @@ function Icones({ languages }) {
   return(
     <div>
       {languages.map((language, index) => (
-        <span key={index} title={language} className={styles.icones}>
+        <>
+        <span key={index} title={language}  >
           {getLanguageIcon(language)}
         </span>
+        </>
       ))}
     </div>
   );

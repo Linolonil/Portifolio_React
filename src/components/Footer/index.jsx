@@ -1,11 +1,9 @@
-import styles from './Footer.module.css'
-
-function Footer(){
-  return(
-    <footer className={styles.footer}>
-  Desenvolvido por Lino jorge &copy; 2024
+function Footer() {
+  return (
+    <footer className="w-screen h-12 bg-[var(--container-color)] text-[var(--text-color)] font-bold text-lg flex items-center justify-center fixed bottom-0 border-t border-[var(--outline-color)] md:text-base z-10">
+      Desenvolvido por Lino Jorge &copy; 2024
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

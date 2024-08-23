@@ -8,9 +8,11 @@ function App() {
 
   return (
     <>
-    <div className="flex flex-col min-h-screen relative overflow-x-hidden">
-      <BackgroundParticles />
-      <div className=" relative z-10">
+    <div className="flex flex-col w-screen min-h-screen overflow-x-hidden">
+      <div className="relative">
+        <BackgroundParticles />
+      </div>
+      <div className=" relative z-10 ">
       <Header />
         <AppRoutes />
       </div>

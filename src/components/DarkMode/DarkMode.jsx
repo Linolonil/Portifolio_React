@@ -17,7 +17,7 @@ function DarkMode() {
   }, [selectedTheme]);
 
   return (
-    <label className={styles.switch}>
+    <label className={` z-[100] ${styles.switch}`}>
       <span className={styles.sun}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <g fill="#ffd43b">

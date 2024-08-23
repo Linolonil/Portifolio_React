@@ -5,7 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        'avatar-sm': '16rem',
+        'avatar-md': '20rem',
+        'avatar-lg': '24rem',
+        'avatar-xl': '28rem',
+      },
+    },
   },
   plugins: [],
+  
 }
+

@@ -1,0 +1,26 @@
+.avatar{
+    height: auto;
+    background-color: rgba(120, 120, 120, 1.7);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--first-color);
+    outline: 2px solid var(--first-color);
+    outline-offset: 1rem;
+    outline: 2px solid var(--first-color);
+    transition: 500ms ease-in-out;
+  }
+  
+  .avatar:hover {
+    outline-offset: -0.7rem;
+    outline: 2px solid var(--first-color);
+    box-shadow: 0 0 40px var(--first-color);
+  }
+  
+ 
+  
+  .animate-fade-in-out {
+    animation: fadeInOut 4s infinite;
+  }
+  
+  .animate-delay-200 {
+    animation-delay: 2s;
+  }

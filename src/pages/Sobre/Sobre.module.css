@@ -26,6 +26,7 @@
     border-radius: 100% 60% 60% 100% / 100% 100% 60% 20%;
   }
 }
+
 .avatar:hover {
   outline-offset: -0.7rem;
   outline: 2px solid var(--first-color);

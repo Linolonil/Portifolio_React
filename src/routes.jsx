@@ -1,7 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import Header from './components/Header/index';
-import Footer from './components/Footer';
 import Home from './pages/Home';
 import Sobre from './pages/Sobre/index';
 import Projetos from './pages/Projetos/index';
@@ -14,7 +12,6 @@ function AnimatedRoutes() {
 
   return (
     <>
-      <Header />
       <AnimatePresence>
         <motion.div
           key={location.pathname}
@@ -22,7 +19,7 @@ function AnimatedRoutes() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.3 }}
-          className="absolute w-full min-h-screen"
+          className="absolute w-screen min-h-screen"
         >
           <Routes location={location}>
             <Route path="/" element={<PaginaBase />}>
@@ -35,7 +32,6 @@ function AnimatedRoutes() {
           </Routes>
         </motion.div>
       </AnimatePresence>
-      <Footer />
     </>
   );
 }

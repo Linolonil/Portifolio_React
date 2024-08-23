@@ -8,7 +8,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --outline-color: none;
+  --outline-color:  hsl(258, 92%, 95%);
   --first-color: hsl(352.96, 100%, 64.9%);
   --title-color: hsl(244, 24%, 36%);
   --text-color: hsl(244, 6%, 23%);
